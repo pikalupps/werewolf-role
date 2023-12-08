@@ -29,8 +29,8 @@ const Roles = () => {
 
   return (
     <div className='grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-6'>
-      {roles.map((role, key) => (
-        <div className="card w-40 lg:w-64 bg-base-100 shadow-xl bg-[#1F2833] p-2 lg:p-4 rounded-xl bg-opacity-50">
+      {roles.map((role, index) => (
+        <div key={index} className="card w-40 lg:w-64 bg-base-100 shadow-xl bg-[#1F2833] p-2 lg:p-4 rounded-xl bg-opacity-50">
           <figure className={
             role.side == 'Bad Side' ? 'card-image card-bad' :
               role.side == 'Good Side' ? 'card-image card-good' :
