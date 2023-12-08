@@ -2,26 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    @apply bg-[#0B0C10] text-white
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.title {
+  @apply font-bold text-xl lg:text-4xl
+}
+
+.card-image {
+  @apply px-5 pt-5 lg:px-10 lg:pt-10 !bg-opacity-70 rounded-xl
+}
+
+.card-title {
+  @apply font-bold text-sm lg:text-xl
+}
+
+.card-desc {
+  @apply lg:text-sm;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.card-side {
+  @apply lg:text-xs py-1 px-2 rounded-xl !bg-opacity-50;
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.card-good {
+  @apply bg-green-500
+}
+
+.card-bad {
+  @apply bg-red-500
+}
+
+.card-neutral {
+  @apply bg-gray-500
 }
