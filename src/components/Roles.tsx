@@ -24,8 +24,9 @@ const Roles = () => {
   const flowerchild = new Role('Flowerchild', 'Jika Flowerchild mendapat vote terbanyak maka ia tidak akan mati dan akan mereveal rolenya ke para penduduk.', 'Good Side', '/flower.png');
   const theFool = new Role('The Fool', 'The Fool akan menang hanya jika ia mendapat vote terbanyak.', 'Neutral Side', '/jester.png');
   const serialKiller = new Role('Serial Killer', 'Pada malam hari Serial Killer dapat memilih satu orang untuk dibunuh. Serial Killer tidak dapat dibunuh oleh Werewolf. Serial Killer akan menang hanya jika ia satu-satunya orang yang selamat.', 'Neutral Side', '/serial-killer.png');
+  const vigilante = new Role("Vigilante", 'Vigilante memiliki dua skill. Skill 1: Pada pagi hari dapat mereveal role seseorang. Skill 2: Pada pagi hari dapat menembak seseorang', "Good Side", "/vigilante.png")
 
-  const roles: Role[] = [werewolf, villager, seer, doctor, bodyguard, cupid, flowerchild, theFool, serialKiller];
+  const roles: Role[] = [werewolf, villager, seer, doctor, bodyguard, cupid, flowerchild, vigilante, theFool, serialKiller];
 
   return (
     <div className='grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-6'>
